@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CamCV</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="filter_string">
+        <item>Normal Color</item>
+        <item>Sepia</item>
+        <item>Grayscale</item>
+    </string-array>
+    <string-array name="filter_string2">
+        <item>Normal Filter</item>
+        <item>Posterize</item>
+    </string-array>
+</resources>

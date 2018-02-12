@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="#C0C0C0"
+    android:layout_height="match_parent">
+    <org.opencv.android.JavaCameraView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:id="@+id/show_camera_activity_java_surface_view"
+        opencv:show_fps="true"
+        opencv:camera_id="any" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/navbar2"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_anchor="@id/show_camera_activity_java_surface_view"
+        app:layout_anchorGravity="top|center_horizontal"
+        android:layout_weight="1">
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Color"
+            android:id="@+id/button11"
+            android:backgroundTint="#969696"
+            android:enabled="true" />
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sepia"
+            android:backgroundTint="#969696"
+            android:id="@+id/button12"
+            android:enabled="true" />
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grayscale"
+            android:backgroundTint="#969696"
+            android:id="@+id/button13"
+            android:enabled="true" />
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Negative"
+            android:backgroundTint="#969696"
+            android:id="@+id/button14"
+            android:enabled="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/navbar"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_anchor="@id/show_camera_activity_java_surface_view"
+        app:layout_anchorGravity="top|center_horizontal"
+        android:layout_weight="1">
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Filter"
+            android:id="@+id/button21"
+            android:backgroundTint="#969696"
+            android:enabled="true" />
+        <Button style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posterize Filter"
+            android:backgroundTint="#969696"
+            android:id="@+id/button22"
+            android:enabled="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/navbar3"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:animateLayoutChanges="true"
+        app:layout_anchor="@id/show_camera_activity_java_surface_view"
+        app:layout_anchorGravity="top|center_horizontal"
+        android:layout_weight="1">
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+
+            android:thumbTint="#969696"
+            android:progressTint="#969696"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:progress="100"
+            android:max="200"/>
+
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="#C0C0C0"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_anchor="@id/show_camera_activity_java_surface_view"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="#C0C0C0"
+        android:src="@android:drawable/ic_menu_gallery"
+        app:layout_anchor="@id/capture"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="#C0C0C0"
+        android:src="@drawable/funnel"
+        app:layout_anchor="@id/show_camera_activity_java_surface_view"
+        app:layout_anchorGravity="bottom|left|end"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/colorfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="#C0C0C0"
+        android:src="@drawable/rainbow"
+        app:layout_anchor="@id/filter"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/brightfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="#C0C0C0"
+        android:src="@drawable/sun"
+        app:layout_anchor="@id/colorfilter"/>
+
+</android.support.design.widget.CoordinatorLayout>
